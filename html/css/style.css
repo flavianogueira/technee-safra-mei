@@ -71,23 +71,27 @@ body {
     margin-top: 0;
 }
 
-.footer-social > a{
+.footer > .container > span > a > i.fa {
+    background-color: white;
     display: inline-block;
-    width: 50px;
-    height: 50px;
-    background: #fff;
-    text-align: center;
-    font-size: 20px;
-    color: #0f2440;
-    border-radius: 50%;
-    /* padding-top: 12px; */
-    margin-right: 6px;
-    transition: all 0.3s;
+    border-radius: 60px;
+    box-shadow: 0px 0px 2px #888;
+    padding: 0.5em 0.6em;
 }
 
 #safra-registered{
     color: white;
     font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .logo-navbar{
+        height: 45px;
+    }
+
+    .navbar-account{
+        font-size: 0.8rem;
+    }
 }
 
 /* Sticky footer styles

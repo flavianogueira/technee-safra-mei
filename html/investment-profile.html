@@ -24,22 +24,13 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-safra">
         <a class="navbar-brand" href="./index.html"><img src="./img/logo.png" class="logo-navbar" alt="Logo Banco Safra"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="mr-auto p-2">
-                <h5>Agência: 1234-5</h5>
-                <h5>Conta: 98765-4</h5>
-            </div>
-            <div class="mr-auto p-2">
-                <h3>Bem Vindo, Fábio da Silva</h3>
-            </div>
-            <div class="p-2">
-                <i class="fa fa-info-circle fa-3x" aria-hidden="true"></i>
-            </div>
+        
+        <div class="mr-auto p-2">
+            <h5 class="navbar-account" id="agency">Agência: 1234-5</h5>
+            <h5 class="navbar-account" id="account">Conta: 98765-4</h5>
+        </div>
+        <div class="mr-auto p-2">
+            <h3 class="navbar-account" id="holder">Bem Vindo, Marco Vinicius</h3>
         </div>
     </nav>
     <div class="container-fluid">
@@ -150,23 +141,18 @@
 
     
 
-    <footer class="footer text-center">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    <span id="safra-registered">Banco Safra &reg;</span>
-                </div>
-                <div class="col">
-                    <div class="footer-social">
-                        <a href="#" class="align-middle"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="align-middle"><i class="fa fa-instagram"></i></a>
-                        <a href="#" class="align-middle"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="align-middle"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
+    <footer class="footer">
+        <div class="container">
+          <span id="safra-registered">Banco Safra &reg;</span>
+          <span class="float-right">
+            <a href="#" class="align-middle"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="align-middle"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="align-middle"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="align-middle"><i class="fa fa-linkedin"></i></a>
+        </span>
         </div>
     </footer>
+    <script src="./js/script.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -178,83 +164,11 @@
                     testResult += parseInt($(this).val());
                 });                
 
-                if (testResult < 9) {
-                    var headText = "Seu perfil é conservador";
-                    var bodyText = "" 
+                $.getJSON("./json/dados_perfil_investidor_api.json", function(data){
+                    console.log(data);
 
-                    bodyText += "<p>Te recomendamos as seguintes operações de investimentos:</p>";
-                    bodyText += "<ul>";
-                    bodyText += "<li>Fundo de Renda Fixa</li>";
-                    bodyText += "<li>Títulos Públicos</li>";
-                    bodyText += "<li>Certificado de Depósito Bancário (CDB)</li>";
-                    bodyText += "<li>Letra de Crédito Imobiliário (LCI)</li>";
-                    bodyText += "<li>Letra de Crédito do Agronegócio (LCA)</li>";
-                    bodyText += "<li>Certificado de Recebíveis Imobiliários (CRI)</li>";
-                    bodyText += "<li>Certificado de Recebíveis Agronegócio (CRA)</li>";
-                    bodyText += "<li>Debêntures</li>";
-                    bodyText += "<li>Letras de Câmbio</li>";
-                    bodyText += "</ul>";
-
-                    QuizEndResult(headText, bodyText);
-                } else if(testResult > 9 && testResult < 26) {
-                    var headText = "Seu perfil é moderado";
-                    var bodyText = "" 
-
-                    bodyText += "<p>Te recomendamos as seguintes operações de investimentos:</p>";
-                    bodyText += "<ul>";
-                    bodyText += "<li>Fundo de Renda Fixa</li>";
-                    bodyText += "<li>Títulos Públicos</li>";
-                    bodyText += "<li>Certificado de Depósito Bancário (CDB)</li>";
-                    bodyText += "<li>Letra de Crédito Imobiliário (LCI)</li>";
-                    bodyText += "<li>Letra de Crédito do Agronegócio (LCA)</li>";
-                    bodyText += "<li>Certificado de Recebíveis Imobiliários (CRI)</li>";
-                    bodyText += "<li>Certificado de Recebíveis Agronegócio (CRA)</li>";
-                    bodyText += "<li>Debêntures</li>";
-                    bodyText += "<li>Letras de Câmbio</li>";
-                    bodyText += "<li>Mercado a Vista em Bolsa de Valores</li>";
-                    bodyText += "<li>Posições Doadoras em Empréstimo de Ações (BTC)</li>";
-                    bodyText += "<li>Fundos Multimercado Sem Alavancagem</li>";
-                    bodyText += "<li>Fundo de Ações</li>";
-                    bodyText += "<li>Fundo Cambial</li>";
-                    bodyText += "<li>Fundo de Investimentos em Direitos Creditórios (FIDC)</li>";
-                    bodyText += "<li>Fundo de Investimentos em Participações (FIP)</li>";
-                    bodyText += "<li>Fundo de Investimento Imobiliários (FII)</li>";
-                    bodyText += "<li>Ouro à Vista</li>";
-                    bodyText += "<li>Brazilian Depositary Receipt</li>";
-                    bodyText += "</ul>";
-
-                    QuizEndResult(headText, bodyText);
-                } else {
-                    var headText = "Seu perfil é arrojado";
-                    var bodyText = "" 
-
-                    bodyText += "<p>Te recomendamos as seguintes operações de investimentos:</p>";
-                    bodyText += "<ul>";
-                    bodyText += "<li>Fundo de Renda Fixa</li>";
-                    bodyText += "<li>Títulos Públicos</li>";
-                    bodyText += "<li>Certificado de Depósito Bancário (CDB)</li>";
-                    bodyText += "<li>Letra de Crédito Imobiliário (LCI)</li>";
-                    bodyText += "<li>Letra de Crédito do Agronegócio (LCA)</li>";
-                    bodyText += "<li>Certificado de Recebíveis Imobiliários (CRI)</li>";
-                    bodyText += "<li>Certificado de Recebíveis Agronegócio (CRA)</li>";
-                    bodyText += "<li>Debêntures</li>";
-                    bodyText += "<li>Letras de Câmbio</li>";
-                    bodyText += "<li>Mercado a Vista em Bolsa de Valores</li>";
-                    bodyText += "<li>Posições Doadoras em Empréstimo de Ações (BTC)</li>";
-                    bodyText += "<li>Fundos Multimercado Sem Alavancagem</li>";
-                    bodyText += "<li>Fundo de Ações</li>";
-                    bodyText += "<li>Fundo Cambial</li>";
-                    bodyText += "<li>Fundo de Investimentos em Direitos Creditórios (FIDC)</li>";
-                    bodyText += "<li>Fundo de Investimentos em Participações (FIP)</li>";
-                    bodyText += "<li>Fundo de Investimento Imobiliários (FII)</li>";
-                    bodyText += "<li>Ouro à Vista</li>";
-                    bodyText += "<li>Brazilian Depositary Receipt</li>";
-                    bodyText += "<li>Posições Tomadoras em Empréstimos de Ações (BTC)</li>";
-                    bodyText += "<li>Fundo Multimercado Com Alavancagem</li>";
-                    bodyText += "</ul>";
-
-                    QuizEndResult(headText, bodyText);
-                }
+                    QuizEndResult("SEU PERFIL É " + data.perfil, data.operacoes_indicadas);
+                });
             });
 
             function QuizEndResult(headingText, bodyText){
