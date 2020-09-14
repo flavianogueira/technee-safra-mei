@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safra Mei</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-safra">
+        <a class="navbar-brand" href="./index.html"><img src="./img/logo.png" class="logo-navbar" alt="Logo Banco Safra"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="mr-auto p-2">
+                <h5>Agência: 1234-5</h5>
+                <h5>Conta: 98765-4</h5>
+            </div>
+            <div class="mr-auto p-2">
+                <h3>Bem Vindo, Fábio da Silva</h3>
+            </div>
+            <div class="p-2">
+                <i class="fa fa-info-circle fa-3x" aria-hidden="true"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 text-center">
+                <div class="form-group">
+                    <label for="investment-value">Qual o valor que você pretende investir?</label>
+                    <input type="text" name="investment-value" id="investment-value" class="form-control">
+                </div>
+            </div>
+            <div class="col-3 text-center">
+                <div class="form-group">
+                    <label for="investment-time">Por quantos meses você pretende investir?</label>
+                    <input type="range" name="investment-time" id="investment-time" class="form-control" value="24" min="6" max="60">
+                    <span class="text-muted" id="investment-time-ref">24</span>
+                </div>
+            </div>
+            <div class="col-6 text-center">
+                <label for="investment-product">Selecione o produto:</label>
+                <div class="form-group">
+                    <input type="radio" name="investment-product" id="investment-product-lca" value="LCA"> LCA
+                    <input type="radio" name="investment-product" id="investment-product-lci" value="LCI"> LCI
+                    <input type="radio" name="investment-product" id="investment-product-cdb" value="CDB"> CDB
+                    <input type="radio" name="investment-product" id="investment-product-tesouro" value="Tesouro"> Tesouro
+                </div>
+            </div>
+        </div>
+        <div class="row" id="lca-options" style="display: none;">
+            <div class="col text-center">
+                <div class="card">
+                    <div class="card-header">
+                        LCA 1
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-safra">Investir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="card">
+                    <div class="card-header">
+                        LCA 2
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-safra">Investir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="card">
+                    <div class="card-header">
+                        LCA 3
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-safra">Investir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="card">
+                    <div class="card-header">
+                        LCA 4
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-safra">Investir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="lci-options" style="display: none;">
+            <div class="col text-center">
+                <div class="card">
+                    <div class="card-header">
+                        LCI 1
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-safra">Investir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="card">
+                    <div class="card-header">
+                        LCI 2
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-safra">Investir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="card">
+                    <div class="card-header">
+                        LCI 3
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-safra">Investir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="card">
+                    <div class="card-header">
+                        LCI 4
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-safra">Investir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="cdb-options" style="display: none;">
+            <div class="col text-center">
+                <div class="card">
+                    <div class="card-header">
+                        CDB 1
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-safra">Investir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="card">
+                    <div class="card-header">
+                        CDB 2
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-safra">Investir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="card">
+                    <div class="card-header">
+                        CDB 3
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-safra">Investir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="card">
+                    <div class="card-header">
+                        CDB 4
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-safra">Investir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="tesouro-options" style="display: none;">
+            <div class="col text-center">
+                <div class="card">
+                    <div class="card-header">
+                        Tesouro 1
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-safra">Investir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="card">
+                    <div class="card-header">
+                        Tesouro 2
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-safra">Investir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="card">
+                    <div class="card-header">
+                        Tesouro 3
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-safra">Investir</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col text-center">
+                <div class="card">
+                    <div class="card-header">
+                        Tesouro 4
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-safra">Investir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer text-center">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <span id="safra-registered">Banco Safra &reg;</span>
+                </div>
+                <div class="col">
+                    <div class="footer-social">
+                        <a href="#" class="align-middle"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="align-middle"><i class="fa fa-instagram"></i></a>
+                        <a href="#" class="align-middle"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="align-middle"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $('#investment-time').change(function(){
+                var investmentTime = parseFloat($(this).val());
+                $('#investment-time-ref').text(investmentTime);
+                LoanCalculate();
+            });
+
+            $('input[type="radio"]').click(function(){
+                var option = $(this).val();
+                console.log(option);
+
+                switch (option) {
+                    case "LCA":
+                        $('#lca-options').fadeIn();
+                        $('#lci-options').hide();
+                        $('#cdb-options').hide();
+                        $('#tesouro-options').hide();
+
+                        break;
+                    case "LCI":
+                        $('#lca-options').hide();
+                        $('#lci-options').fadeIn();
+                        $('#cdb-options').hide();
+                        $('#tesouro-options').hide();
+                        
+                        break;
+                    case "CDB":
+                        $('#lca-options').hide();
+                        $('#lci-options').hide();
+                        $('#cdb-options').fadeIn();
+                        $('#tesouro-options').hide();
+                        
+                        break;
+                    case "Tesouro":
+                        $('#lca-options').hide();
+                        $('#lci-options').hide();
+                        $('#cdb-options').hide();
+                        $('#tesouro-options').fadeIn();
+                        
+                        break;
+                
+                    default:
+                        break;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

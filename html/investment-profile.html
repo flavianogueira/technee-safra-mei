@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safra Mei</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-safra">
+        <a class="navbar-brand" href="./index.html"><img src="./img/logo.png" class="logo-navbar" alt="Logo Banco Safra"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="mr-auto p-2">
+                <h5>Agência: 1234-5</h5>
+                <h5>Conta: 98765-4</h5>
+            </div>
+            <div class="mr-auto p-2">
+                <h3>Bem Vindo, Fábio da Silva</h3>
+            </div>
+            <div class="p-2">
+                <i class="fa fa-info-circle fa-3x" aria-hidden="true"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <form action="#">
+                    <div class="form-group">
+                        <label for="invest-deadLine">1 - Qual o prazo que você pretende manter seu dinheiro investido?</label>
+                        <div class="form-row">
+                            <ol type="a">
+                                <li><input type="radio" name="invest-deadline-chk" id="invest-deadline-chk-1" value="0"> Até 6 Meses</li>
+                                <li><input type="radio" name="invest-deadline-chk" id="invest-deadline-chk-2" value="2"> De 6 meses a 1 ano</li>
+                                <li><input type="radio" name="invest-deadline-chk" id="invest-deadline-chk-3" value="3"> De 1 ano a 3 anos</li>
+                                <li><input type="radio" name="invest-deadline-chk" id="invest-deadline-chk-4" value="4"> Mais de 3 anos</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="invest-reason">2 - Porque você deseja investir seu dinheiro?</label>
+                        <div class="form-row">
+                            <ol type="a">
+                                <li><input type="radio" name="invest-reason-chk" id="invest-reason-chk-1" value="0"> Manter meu patrimônio ao longo do tempo, assumindo perdas mínimas  </li>
+                                <li><input type="radio" name="invest-reason-chk" id="invest-reason-chk-2" value="2"> Aumentar meu patrimônio progressivamente com probabilidade média de perdas</li>
+                                <li><input type="radio" name="invest-reason-chk" id="invest-reason-chk-3" value="4"> Aumentar meu patrimônio com ganhos acima da média de mercado, ainda que isso signifique riscos maiores de perda</li>
+                                <li><input type="radio" name="invest-reason-chk" id="invest-reason-chk-4" value="5"> Aumentar meu patrimônio com ganhos acima da média de mercado, em um espaço de tempo curto, ainda que isso signifique riscos maiores de perda</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="invest-type">3 - Você já realizou algum tipo de investimento? Qual?</label>
+                        <div class="form-row">
+                            <ol type="a">
+                                <li><input type="radio" name="invest-type-chk" id="invest-type-chk-1" value="0"> Não realizei nenhum tipo de investimento</li>
+                                <li><input type="radio" name="invest-type-chk" id="invest-type-chk-2" value="2"> Realizei investimentos em renda fixa</li>
+                                <li><input type="radio" name="invest-type-chk" id="invest-type-chk-3" value="4"> Realizei investimentos em renda fixa e/ou renda variável (operações da bolsa)</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="invest-experience">4 - Qual tipo de experiência você possui com mercado financeiro?</label>
+                        <div class="form-row">
+                            <ol type="a">
+                                <li><input type="radio" name="invest-experience-chk" id="invest-experience-chk-1" value="0"> Não possuo conhecimento    </li>
+                                <li><input type="radio" name="invest-experience-chk" id="invest-experience-chk-2" value="1"> Possuo conhecimento no mercado financeiro, mas nunca investi</li>
+                                <li><input type="radio" name="invest-experience-chk" id="invest-experience-chk-3" value="4"> Possuo conhecimento e já invisto no mercado financeiro</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="invest-howMuch">5 - Quanto do seu dinheiro você pretende investir?</label>
+                        <div class="form-row">
+                            <ol type="a">
+                                <li><input type="radio" name="invest-howMuch-chk" id="invest-howMuch-chk-1" value="0"> Até 25%</li>
+                                <li><input type="radio" name="invest-howMuch-chk" id="invest-howMuch-chk-2" value="2"> Entre 25% e 50%</li>
+                                <li><input type="radio" name="invest-howMuch-chk" id="invest-howMuch-chk-3" value="4"> Acima de 50%</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="invest-market">6 - Se algo ocorresse no mercado, fazendo com que seu dinheiro sofresse uma perda do valor investido, como você reagiria?</label>
+                        <div class="form-row">
+                            <ol type="a">
+                                <li><input type="radio" name="invest-market-chk" id="invest-market-chk-1" value="0"> Retiraria todo o dinheiro investido e colocaria na poupança</li>
+                                <li><input type="radio" name="invest-market-chk" id="invest-market-chk-2" value="2"> Manteria a aplicação esperando uma melhora no mercado</li>
+                                <li><input type="radio" name="invest-market-chk" id="invest-market-chk-3" value="4"> Investiria mais para aproveitar as ofertas de mercado</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="invest-howInvest">7 - Como você investe seu dinheiro?</label>
+                        <div class="form-row">
+                            <ol type="a">
+                                <li><input type="radio" name="invest-howInvest-chk" id="invest-howInvest-chk-1" value="0"> Meu dinheiro não está aplicado ou está aplicado em renda fixa</li>
+                                <li><input type="radio" name="invest-howInvest-chk" id="invest-howInvest-chk-2" value="2"> 25% aplicado em renda variável (operações na bolsa) e o restante em renda fixa</li>
+                                <li><input type="radio" name="invest-howInvest-chk" id="invest-howInvest-chk-3" value="3"> Entre 25% e 50% aplicado em renda variável (operações na bolsa) e o restante em renda fixa</li>
+                                <li><input type="radio" name="invest-howInvest-chk" id="invest-howInvest-chk-4" value="4"> Acima de 50% em renda variável (operações na bolsa)</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="invest-profit">8 - Em relação ao lucro dessas aplicações, o que melhor corresponde ao seu caso?</label>
+                        <div class="form-row">
+                            <ol type="a">
+                                <li><input type="radio" name="invest-profit-chk" id="invest-profit-chk-1" value="0"> Conto com esse lucro para completar minha renda mensal</li>
+                                <li><input type="radio" name="invest-profit-chk" id="invest-profit-chk-2" value="2"> Pretendo fazer aplicações regulares e somente em situações de necessidade resgatar as aplicações para completar meus gastos</li>
+                                <li><input type="radio" name="invest-profit-chk" id="invest-profit-chk-3" value="3"> Pretendo fazer aplicações regulares e não retirar o dinheiro</li>
+                                <li><input type="radio" name="invest-profit-chk" id="invest-profit-chk-4" value="4"> Não pretendo fazer novas aplicações e nem retirar o dinheiro</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="submit" class="btn btn-safra btn-lg">Avaliar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row" id="quiz-success" style="display: none;">
+            <div class="col">
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading" id="resultHeading">Parabéns!</h4>
+                    <div id="resultBody"></div>
+                    <!-- <hr>
+                    <p class="mb-0">Caso você tenha mais solicitações de crédito, você poderá buscar seus créditos pré-aprovados <a href="#">clicando aqui</a>.</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <footer class="footer text-center">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <span id="safra-registered">Banco Safra &reg;</span>
+                </div>
+                <div class="col">
+                    <div class="footer-social">
+                        <a href="#" class="align-middle"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="align-middle"><i class="fa fa-instagram"></i></a>
+                        <a href="#" class="align-middle"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="align-middle"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $('#submit').click(function (e) { 
+                e.preventDefault();
+                var testResult = 0;
+
+                $('input[type="radio"]:checked').each(function () {
+                    testResult += parseInt($(this).val());
+                });                
+
+                if (testResult < 9) {
+                    var headText = "Seu perfil é conservador";
+                    var bodyText = "" 
+
+                    bodyText += "<p>Te recomendamos as seguintes operações de investimentos:</p>";
+                    bodyText += "<ul>";
+                    bodyText += "<li>Fundo de Renda Fixa</li>";
+                    bodyText += "<li>Títulos Públicos</li>";
+                    bodyText += "<li>Certificado de Depósito Bancário (CDB)</li>";
+                    bodyText += "<li>Letra de Crédito Imobiliário (LCI)</li>";
+                    bodyText += "<li>Letra de Crédito do Agronegócio (LCA)</li>";
+                    bodyText += "<li>Certificado de Recebíveis Imobiliários (CRI)</li>";
+                    bodyText += "<li>Certificado de Recebíveis Agronegócio (CRA)</li>";
+                    bodyText += "<li>Debêntures</li>";
+                    bodyText += "<li>Letras de Câmbio</li>";
+                    bodyText += "</ul>";
+
+                    QuizEndResult(headText, bodyText);
+                } else if(testResult > 9 && testResult < 26) {
+                    var headText = "Seu perfil é moderado";
+                    var bodyText = "" 
+
+                    bodyText += "<p>Te recomendamos as seguintes operações de investimentos:</p>";
+                    bodyText += "<ul>";
+                    bodyText += "<li>Fundo de Renda Fixa</li>";
+                    bodyText += "<li>Títulos Públicos</li>";
+                    bodyText += "<li>Certificado de Depósito Bancário (CDB)</li>";
+                    bodyText += "<li>Letra de Crédito Imobiliário (LCI)</li>";
+                    bodyText += "<li>Letra de Crédito do Agronegócio (LCA)</li>";
+                    bodyText += "<li>Certificado de Recebíveis Imobiliários (CRI)</li>";
+                    bodyText += "<li>Certificado de Recebíveis Agronegócio (CRA)</li>";
+                    bodyText += "<li>Debêntures</li>";
+                    bodyText += "<li>Letras de Câmbio</li>";
+                    bodyText += "<li>Mercado a Vista em Bolsa de Valores</li>";
+                    bodyText += "<li>Posições Doadoras em Empréstimo de Ações (BTC)</li>";
+                    bodyText += "<li>Fundos Multimercado Sem Alavancagem</li>";
+                    bodyText += "<li>Fundo de Ações</li>";
+                    bodyText += "<li>Fundo Cambial</li>";
+                    bodyText += "<li>Fundo de Investimentos em Direitos Creditórios (FIDC)</li>";
+                    bodyText += "<li>Fundo de Investimentos em Participações (FIP)</li>";
+                    bodyText += "<li>Fundo de Investimento Imobiliários (FII)</li>";
+                    bodyText += "<li>Ouro à Vista</li>";
+                    bodyText += "<li>Brazilian Depositary Receipt</li>";
+                    bodyText += "</ul>";
+
+                    QuizEndResult(headText, bodyText);
+                } else {
+                    var headText = "Seu perfil é arrojado";
+                    var bodyText = "" 
+
+                    bodyText += "<p>Te recomendamos as seguintes operações de investimentos:</p>";
+                    bodyText += "<ul>";
+                    bodyText += "<li>Fundo de Renda Fixa</li>";
+                    bodyText += "<li>Títulos Públicos</li>";
+                    bodyText += "<li>Certificado de Depósito Bancário (CDB)</li>";
+                    bodyText += "<li>Letra de Crédito Imobiliário (LCI)</li>";
+                    bodyText += "<li>Letra de Crédito do Agronegócio (LCA)</li>";
+                    bodyText += "<li>Certificado de Recebíveis Imobiliários (CRI)</li>";
+                    bodyText += "<li>Certificado de Recebíveis Agronegócio (CRA)</li>";
+                    bodyText += "<li>Debêntures</li>";
+                    bodyText += "<li>Letras de Câmbio</li>";
+                    bodyText += "<li>Mercado a Vista em Bolsa de Valores</li>";
+                    bodyText += "<li>Posições Doadoras em Empréstimo de Ações (BTC)</li>";
+                    bodyText += "<li>Fundos Multimercado Sem Alavancagem</li>";
+                    bodyText += "<li>Fundo de Ações</li>";
+                    bodyText += "<li>Fundo Cambial</li>";
+                    bodyText += "<li>Fundo de Investimentos em Direitos Creditórios (FIDC)</li>";
+                    bodyText += "<li>Fundo de Investimentos em Participações (FIP)</li>";
+                    bodyText += "<li>Fundo de Investimento Imobiliários (FII)</li>";
+                    bodyText += "<li>Ouro à Vista</li>";
+                    bodyText += "<li>Brazilian Depositary Receipt</li>";
+                    bodyText += "<li>Posições Tomadoras em Empréstimos de Ações (BTC)</li>";
+                    bodyText += "<li>Fundo Multimercado Com Alavancagem</li>";
+                    bodyText += "</ul>";
+
+                    QuizEndResult(headText, bodyText);
+                }
+            });
+
+            function QuizEndResult(headingText, bodyText){
+                $("#resultHeading").html(headingText);
+                $("#resultBody").html(bodyText);
+
+                $('#quiz-success').fadeIn();
+            }
+        });
+    </script>
+</body>
+
+</html>
