@@ -1,0 +1,1 @@
+Necessária a instalação de a extensão LIVE SERVER, de RITWICK DAY no visual studio code para rodar a aplicação.
